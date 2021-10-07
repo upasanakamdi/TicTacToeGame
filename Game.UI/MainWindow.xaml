@@ -1,0 +1,19 @@
+﻿<Window x:Class="Game.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:view="clr-namespace:Game.UI.GameControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="652" Width="500">
+    
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <view:TicTacToeGrid Grid.Row="0" DataContext="{Binding TicTacToeGridViewModel}"></view:TicTacToeGrid>
+        <view:TicTacToeControls Grid.Row="1" DataContext="{Binding TicTacToeControlsViewModel}"></view:TicTacToeControls>
+    </Grid>
+</Window>
